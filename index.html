@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="testApp">
+  <title>test</title>
+  <head>
+    <meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/test.js"></script>
+		<script src="js/angular.js"></script>
+		<link href="css/bootstrap.css" rel="stylesheet">
+	</head>
+		
+  <body ng-controller="testCtrl">
+		<h1> 
+		  {{test.user}}'s slices 
+			<span>{{test.items.length}}</span>
+		</h1>
+    
+    <div id="slices">  
+      <div ng-repeat = "item in test.items" 
+        ng-model="testInput" 
+        class="ng-scope" 
+        ng-click="initSlice(testInput)">
+         
+			  {{ item.name }}
+      </div>
+    </div>
+  </body>
+</html>
